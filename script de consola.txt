@@ -1,0 +1,98 @@
+Virtual agregaste una placa de red con visibilidad desde el host
+Agregamos usuario Mauro
+A mauro se le dio permiso de sudoers - sudo usermod -aG sudo newuser
+Se agrego ssh daemon en virtual
+instalamos git  sudo apt-get install git
+Creamos carpeta del usuario mauro sudo mkdir
+Le dimos permiso al usuario mauro a la carpeta mauro
+ git clone https://github.com/pabloniklas/computacionaplicada.git
+Instalamos apache2
+Actualizamos repo a 
+# Repositorio base estable.
+deb http://deb.debian.org/debian/ buster main contrib non-free
+deb-src http://deb.debian.org/debian/ buster main contrib non-free
+ 
+# Repositorio de actualizaciones de seguridad
+deb http://security.debian.org/debian-security buster/updates main contrib non-free
+deb-src http://security.debian.org/debian-security buster/updates main contrib non-free
+ 
+# Repositorio de actualizaciones anteriormente conocido como "Volátil"
+deb http://deb.debian.org/debian/ buster-updates main contrib non-free
+deb-src http://deb.debian.org/debian/ buster-updates main contrib non-free
+ 
+# Backports contrib
+deb http://deb.debian.org/debian buster-backports main contrib non-free
+deb-src http://deb.debian.org/debian buster-backports main contrib non-free
+ 
+# Repositorio multimedia
+deb http://www.deb-multimedia.org buster main non-free
+
+instalamos apache2
+wget https://repo.mysql.com//mysql-apt-config_0.8.22-1_all.deb
+
+install gnupg
+sudo dpkg -i mysql-apt-config_0.8.22-1_all.deb
+sudo apt-get update
+sudo apt-get install mysql-server
+pwd mysql pepe123
+ mysql -u root -p < db.sql
+ mysql -u root -p 
+ use ingenieria;
+ show tables;
+ exit
+ sudo apt install php
+
+ sudo apt install libapache2-mod-php
+sudo systemctl restart apache2
+ sudo cp index.php /var/www/html/
+sudo chmod a+x /var/www/html/index.php
+sudo cat /var/log/apache2/error.log
+apt-get install php-mysqlnd
+sudo systemctl restart apache2
+sudo vi /var/www/html/index.php
+Actualizo credenciales en file php
+sudo systemctl restart apache2
+mysql -u root -p
+ CREATE USER 'lcars'@'localhost' IDENTIFIED WITH mysql_native_password BY 'NCC1701D';
+GRANT ALL PRIVILEGES ON ingenieria. * TO 'lcars'@'localhost';
+sudo vi /etc/ssh/sshd_config
+Modifique PermitRootLogin without-password
+Modifique PubkeyAuthentication yes
+sudo service sshd restart
+sudo mkdir /root/.ssh
+sudo cp clave_privada_sonda /root/.ssh/authorized_keys
+
+Me logue con las claves de git del profe
+ssh -i c:\caplicada\clave_privada_sonda root@192.168.56.101
+
+
+sudo apt-get install cron
+
+vim sshd_config (cambiamos para que el root pueda ingresar con el pass de la maquina anfitriona)
+
+sudo mkdir /opt/tp/
+sudo mkdir /opt/tp/firewall/
+
+Firewall
+============
+sudo iptables-save -f /opt/tp/firewall/firewall.conf
+
+sudo iptables -L
+sudo iptables -A INPUT -p tcp --drop 22 -j ACCEPT
+
+sudo iptables -A INPUT -p tcp --drop 80 -j ACCEPT
+
+sudo iptables -p INPUT DROP
+
+sudo apt install build-essential dkms
+
+Raid
+===========
+sudo apt-get install mdadm
+sudo apt-get install uuid
+
+
+
+
+
+
