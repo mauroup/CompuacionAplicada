@@ -1,8 +1,11 @@
 # Computación Aplicada 2025 - TP Final
 
 ## Participantes
-- Mauro Pérez
-- (Agregar más nombres si corresponde)
+- Mauro Gil
+- JOSE IGNACIO FERNANDEZ DE LA RUA
+- LUIS LIGARRIBAY
+- IAN RUIZ DIAZ
+- ABRIL SANTISO
 
 ## Descripción del Proyecto
 Este repositorio contiene los backups y configuraciones de un servidor Debian configurado manualmente para prácticas de administración de sistemas.
